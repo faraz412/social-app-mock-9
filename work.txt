@@ -1,0 +1,31 @@
+User
+{
+    "name":"batman",
+    "email":"batman@gmail.com",
+    "password":"batman123",
+    "dob":1995-7-22,
+    "bio":"Dark knight"
+}
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDUwYjQ2MDQzNjU4OTUxNTc2N2MyNGMiLCJpYXQiOjE2ODMwMTA2ODJ9.2Ju8gC1PETE9foqcstQS5Zkm7vT0CSYqxCxLZJOYZHE
+
+{
+    "name":"flash",
+    "email":"flash@gmail.com",
+    "password":"flash123",
+    "dob":1998-7-22,
+    "bio":"Ultra Speed"
+}
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDUwYjg2MzEyNDY4OGExNTMzOTEzMGEiLCJpYXQiOjE2ODMwMTI1ODl9.zkpDyAY8GAj9HsxQgRJFx-_AlRx1aKKOYGOsgmdZbFk
+
+const postSchema=mongoose.Schema=({
+    user: { type: String, required:true },
+    text: { type: String, required:true },
+    image: { type: String},
+    likes: [{ userID:{type: String, required:true}}],
+    createdAt: {type:Date, default:Date.now()},
+    comments: [{
+      user: { type: String, required:true },
+      text: { type: String, required:true },
+      createdAt: {type:Date, default:Date.now()}
+    }]
+});
